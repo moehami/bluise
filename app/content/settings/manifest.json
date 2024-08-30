@@ -1,8 +1,8 @@
 {
-  "name": "Bluise",
+  "name": "Headine",
   "shortName": "Bluise",
-  "description": "A Nuxt.js & Netlify CMS boilerplate.",
+  "description": "Welcome to the Hell",
   "themeColor": "#0b3765",
-  "backgroundColor": "#ffffff",
-  "lang": "en"
+  "backgroundColor": "#ffff00",
+  "lang": "ar"
 }
