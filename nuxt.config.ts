@@ -62,15 +62,18 @@ const nuxtConfig: Configuration = {
       ...fg.sync(['./app/content/blog/**.json', './app/content/pages/**.json']).map(url => ({
         route: url.replace(/^.\/app\/content(\/pages)?|.json$/gi, ''),
         payload: require(url),
-      })),"handle": "filesystem",
-    ],
+      })),
+    ],d
   },
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
 
+plugins: [
+  {src: '~/plugins/element-ui', ssr: false},
+  {src: '~/plugins/vee-validate.js', ssr: true},
+],
   /*
    ** Nuxt.js modules
    */
