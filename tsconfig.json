@@ -16,7 +16,7 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "skipLibCheck": true,
-    "baseUrl": "./app",
+    "baseUrl": "",
     "paths": {
       "~/*": ["./app/*"],
       "@/*": ["./app/*"]
