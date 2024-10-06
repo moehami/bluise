@@ -1,0 +1,13 @@
+name: example-install-command
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+        with:
+          install-command: yarn --frozen-lockfile --silent
+          working-directory: bluise/yarn
+      - run: npm t
+        working-directory: bluise/yarn
