@@ -67,9 +67,9 @@
     "jest": "^26.1.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-static-stubs": "0.0.1",
-    "node-sass": "^7.0.1",
+    "node-sass": "latest",
     "prettier": "^2.0.5",
-    "sass-loader": "^9.0.1",
+    "sass-loader": "latest",
     "ts-jest": "^26.1.1",
     "vue-jest": "^3.0.6"
   }
