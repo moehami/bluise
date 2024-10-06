@@ -62,7 +62,7 @@ const nuxtConfig: Configuration = {
       ...fg.sync(['./app/content/blog/**.json', './app/content/pages/**.json']).map(url => ({
         route: url.replace(/^.\/app\/content(\/pages)?|.json$/gi, ''),
         payload: require(url),
-      })),
+      })),"handle": "filesystem",
     ],
   },
 
