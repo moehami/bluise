@@ -58,7 +58,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   // target: process.env.NODE_TARGET === 'static' ? 'static' : 'server',
   // ssr: true,
-  target: 'static'
+  target: 'universal'
   ssr: false,
   generate: {
     subFolders: false,
@@ -68,7 +68,7 @@ export default {
       ...fg.sync(['./app/content/blog/**.json', './app/content/pages/**.json']).map(url => ({
         route: url.replace(/^.\/app\/content(\/pages)?|.json$/gi, ''),
         payload: require(url),
-      })),
+      })), "handle": "filesystem",
     ],d
   },
 
