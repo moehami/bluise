@@ -54,10 +54,15 @@ const nuxtConfig: Configuration = {
   styleResources: {
     scss: ['~assets/css/_variables.scss', '~assets/css/_mixins.scss'],
   },
-
+export default {
+  // Global page headers: https://go.nuxtjs.dev/config-head
+  // target: process.env.NODE_TARGET === 'static' ? 'static' : 'server',
+  // ssr: true,
+  target: 'static
   generate: {
     subFolders: false,
-
+  }
+},
     routes: [
       ...fg.sync(['./app/content/blog/**.json', './app/content/pages/**.json']).map(url => ({
         route: url.replace(/^.\/app\/content(\/pages)?|.json$/gi, ''),
