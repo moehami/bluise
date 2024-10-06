@@ -1,0 +1,21 @@
+image: node:latest
+
+pipelines:
+  default:
+    - step:
+        script:
+          - echo "This step runs for all branches except those specified explicitly."
+
+  branches:
+    main:
+      - step:
+          name: Build and Deploy to Main
+          deployment: production
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+            - scp -o StrictHostKeyChecking=no -r .next/ ubuntu@ec2-18-xxx-xxx-xx.eu-west-2.compute.amazonaws.com:/home/ubuntu/my-project/
+              # for react js project you have to use build directory instead of .next
+            - ssh -o StrictHostKeyChecking=no ubuntu@ec2-18-xxx-xxx-xx.eu-west-2.compute.amazonaws.com "source ~/.nvm/nvm.sh && pm2 restart all"
