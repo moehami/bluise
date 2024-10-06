@@ -58,8 +58,8 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   // target: process.env.NODE_TARGET === 'static' ? 'static' : 'server',
   // ssr: true,
-  target: 'server'
-  ssr: true,
+  target: 'static'
+  ssr: false,
   generate: {
     subFolders: false,
   }
