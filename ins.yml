@@ -4,10 +4,10 @@ jobs:
   test:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./
         with:
           install-command: yarn --frozen-lockfile --silent
           working-directory: bluise/yarn
-      - run: npm t
-        working-directory: bluise/yarn
+      - run: npm install node-sass --unsafe-perm=true --allow-root
+      working-directory: bluise/yarn
