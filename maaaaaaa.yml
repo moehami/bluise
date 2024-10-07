@@ -1,2 +1,2 @@
-rm -rf .nuxt
-nuxt generate
+generate:
+  command: nuxt generate
