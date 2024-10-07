@@ -1,8 +1,3 @@
 # nuxt.yml
-cleanup:
-command: npx nuxi cleanup
-build:
-  command: nuxt build
-
-  generate:
-  command: nuxt generate --buildDir dist
+rm -rf .nuxt
+npm run generate
