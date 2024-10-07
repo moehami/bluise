@@ -1,2 +1,7 @@
+# nuxt.yml
+
+build:
+  command: nuxt build
+
 generate:
   command: nuxt generate
